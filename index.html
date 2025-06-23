@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Divine Front – Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:sans-serif; text-align:center; }
+    /* Écran de démarrage */
+    #startScreen {
+      position:fixed; inset:0; background:#000;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      z-index:10;
+    }
+    #startBtn {
+      padding:20px 40px; font-size:24px; border:none; border-radius:8px;
+      background:#27ae60; color:#fff; cursor:pointer;
+    }
+    /* Bouton reset in-game */
+    #resetBtn {
+      position:fixed; top:10px; right:10px; z-index:5;
+      padding:10px 20px; font-size:16px; border:none; border-radius:6px;
+      background:#c0392b; color:#fff; display:none;
+    }
+  </style>
+
+  <!-- Phaser 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+  <!-- Ton script de jeu -->
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div id="startScreen">
+    <h1>🌍 Divine Front</h1>
+    <button id="startBtn">Lancer la partie</button>
+  </div>
+
+  <button id="resetBtn">🔄 Reset</button>
+</body>
+</html>
