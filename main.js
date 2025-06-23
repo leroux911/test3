@@ -104,3 +104,13 @@ class World extends Phaser.Scene {
   draw () {
     gfx.clear();
     f
+window.addEventListener("load", () => {
+  document.getElementById("startBtn").addEventListener("click", () => {
+    document.getElementById("startScreen").style.display = "none";
+    startGame();
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    startGame();
+  });
+});
